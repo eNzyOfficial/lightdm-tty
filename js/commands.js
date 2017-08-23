@@ -21,8 +21,8 @@ let commands = {
                 lightdm.cancel_authentication();
             }
             
-            this.session = user[0].session !== null ? user[0].session : lightdm.default_session;
-            lightdm.start_authentication(user[0].name);    
+            this.session = user.session !== null && user.session === this.session ? user.session : this.session;
+            lightdm.start_authentication(user.name);    
             return true;
         },
 
@@ -60,7 +60,7 @@ let commands = {
                 lightdm.cancel_authentication();
             }
             
-            this.session = user[0].session !== null ? user[0].session : lightdm.default_session;
+            this.session = user.session !== null ? user.session : lightdm.default_session;
             lightdm.start_authentication(user[0].name);
             return true;
         },
@@ -129,14 +129,15 @@ let commands = {
 
         callback: function(args) {
             // TODO: Verify session
-            session = args[0];
+            let session = args[0];
+            session = this.utils.arrayOfObjectsHasKeyValue(lightdm.sessions, 'key', session);
 
-            if (!this.utils.arrayOfObjectsHasKeyValue(lightdm.sessions, 'key', session)) {
+            if (!session) {
                 this.stderr(`bash: no such session: ${session}`);
                 return false;
             }
 
-            this.session = session;
+            this.session = session.key;
             return true;
         }
     },

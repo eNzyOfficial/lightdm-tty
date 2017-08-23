@@ -22,7 +22,7 @@ class tty {
 
         // Set up output handlers
         this.output = document.getElementById('stdout');
-        this.default_prompt = user ? `<span class="stdout-green">${user[0].name}</span><span class="stdout-red">@</span>${lightdm.hostname} $\xa0` : lightdm.hostname + " $\xa0"
+        this.default_prompt = user ? `<span class="stdout-green">${user.name}</span><span class="stdout-red">@</span>${lightdm.hostname} $\xa0` : lightdm.hostname + " $\xa0"
 
         // Setup prompt
         this.prompt = document.getElementById('prompt');
@@ -285,7 +285,7 @@ class utils {
         });
 
         if (result.length > 0) {
-            return result;
+            return result[0];
         }
 
         return false;

@@ -13,6 +13,6 @@ source=("git+https://github.com/eNzyOfficial/${_pkgname}.git")
 md5sums=('SKIP')
 
 package() {
-    install -dm755 "$pkgdir/usr/share/lightdm-webkit/themes/lightdm-tty"
-    cp -r "$srcdir/$_pkgname/"* "$pkgdir/usr/share/lightdm-webkit/themes/lightdm-tty/"
+    install -dm755 "$pkgdir/usr/share/lightdm-webkit/themes/tty"
+    cp -r "$srcdir/$_pkgname/"* "$pkgdir/usr/share/lightdm-webkit/themes/tty/"
 }

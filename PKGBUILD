@@ -9,7 +9,7 @@ url="https://github.com/eNzyOfficial/lightdm-tty"
 license=('WTFPL')
 depends=('lightdm-webkit2-greeter')
 makedepends=('git')
-source=("git+https://github.com/eNzyOfficial/${_pkgname}.git")
+source=("lightdm-tty::git+https://github.com/eNzyOfficial/${_pkgname}.git")
 md5sums=('SKIP')
 
 pkgver() {

@@ -19,6 +19,13 @@ A simple terminal style theme for lightdm-webkit2-greeter
 
 You can run `./test.sh` to try it out if you like!
 
+### Arch Linux
+lightdm-tty is available from the [Arch User Repository (AUR)](https://aur.archlinux.org/packages/lightdm-webkit2-theme-tty-git/). Install it with your favourite AUR helper, for example:
+
+`pacaur -S lightdm-webkit2-theme-tty-git`
+
+If you don't want to use an AUR helper, you can always build the package manually from the PKGBUILD included in the repository.
+
 ## Features
 
 * Command history using ↑ and ↓

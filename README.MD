@@ -53,11 +53,12 @@ You can lock by using `dm-tool switch-to-greeter` or `dm-tool lock`
 * Make it more customizable
 * Languages
 * Layouts
-* Add to Arch AUR
 
 ## Contributions
 
 Feel free to make contributions! Suggestions, bug reports and pull requests are welcome.
+
+Thanks for [Tardog](https://github.com/Tardog) for adding it to the AUR
 
 ## License
 
